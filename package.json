@@ -1,0 +1,26 @@
+{
+  "name": "ijs2017",
+  "version": "1.0.0",
+  "description": "Source code from IJS 2017 the presentation from Manuel Rauber",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@types/node": "^12.0.10",
+    "nodemon": "^1.19.1",
+    "pg": "^7.11.0",
+    "restify": "^8.3.3",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.3.0",
+    "typeorm": "^0.2.18",
+    "typescript": "^3.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "docker-build": "docker build -t nikodovidija/typescript_test_ijs2017:latest .",
+    "docker-push": "docker push nikodovidija/typescript_test_ijs2017",
+    "build": "rimraf build && tsc",
+    "start-server": "node build/index.js",
+    "start": "nodemon --exec ts-node src/index.ts"
+  },
+  "author": "Niko Dovidija",
+  "license": "ISC"
+}
